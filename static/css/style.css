@@ -1,0 +1,15 @@
+header {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 66px;
+    border-bottom: 1px solid orange;
+    /* width: max-content; */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}

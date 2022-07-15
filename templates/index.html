@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    ISS LOCATOR
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="card">    
+        
+        <p><b>Longitude</b> {{location_info['Longitude']}}</p>
+        <p><b>Latitude</b>: {{location_info['Latitude']}}</p>
+        <p><b>Weather Description</b>: {{location_info['Weather']['weather'][0]['description']}}</p>
+        <p><b>Temperature in Celsius</b>: {{location_info['Weather']['main']['temp']}}</p>
+        <p><b>Country/State</b>: {{location_info['State']}}</p>
+        <p><b>Flag</b>: {{location_info['Flag']}}</p>
+        <p><b>Currency</b>: {{location_info['Currency']}}</p>        
+        <p><b>Distance Diff</b>: {{location_info['DD']}}</p>        
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="card">    
+        <div id="av-orbit">
+            <script>
+                var avOrbitProperties = {
+                    size: 'small',
+                    lang: 'en'
+                };
+            </script>
+            <script src="https://astroviewer.net/widgets/widgets/orbit.js"></script>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
